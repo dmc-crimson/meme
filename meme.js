@@ -3,6 +3,7 @@ const topTextInput = document.getElementById('top-text');
 const bottomTextInput = document.getElementById('bottom-text');
 const generateBtn = document.getElementById('generate-btn');
 const downloadBtn = document.getElementById('download-btn');
+const deleteBtn = document.getElementById('delete-btn');
 const canvas = document.getElementById('meme-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -25,10 +26,10 @@ imageUpload.addEventListener('change', function (event) {
 });
 
 function drawText(text, x, y) {
-    ctx.fillStyle = 'white';
-    ctx.strokeStyle = 'black';
+    ctx.fillStyle = 'black';
+    ctx.strokeStyle = 'white';
     ctx.lineWidth = 2;
-    ctx.font = 'bold 30px Arial';
+    ctx.font = 'bold 75px Arial';
     ctx.textAlign = 'center';
     ctx.fillText(text, x, y);
     ctx.strokeText(text, x, y);
@@ -46,3 +47,23 @@ function generateMeme() {
 
 generateBtn.addEventListener('click', generateMeme);
 
+downloadBtn.addEventListener('click', function () {
+    const memeURL = canvas.toDataURL('image/png');
+    const a = document.createElement('a');
+    a.href = memeURL;
+    a.download = 'meme.png';
+    a.click();
+});
+deleteBtn.addEventListener('click', function (){
+     const fileInput = document.getElementById('imgae/png');
+     fileInput.value = '';
+}
+);
+const imageContainer = document.getElementById('imageContainer');
+        imageContainer.addEventListener('click',
+            function (event) {
+                if (event.target.classList.contains('deleteButton')) {
+                    const imageElement = event.target.previousElementSibling;
+                    imageElement.parentNode.removeChild(imageElement);
+                }
+            });
