@@ -1,20 +1,21 @@
+/* the look of the body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #42a9cb;
     margin: 0;
-    padding: 0;
+    padding: 20;
 }
-
+/* how the container will look */
 .container {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+    padding: 50px;
+    background-color: #64e51e;
+    border-radius: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
+/* how all the h1 headers will look */
 h1 {
     color: #333;
 }
@@ -23,15 +24,16 @@ input[type="file"],
 input[type="text"],
 button {
     margin: 10px 0;
-    padding: 10px;
-    font-size: 16px;
+    padding: 20px;
+    font-size: 20px;
     width: 80%;
     max-width: 400px;
 }
 
+
 .meme-container {
     position: relative;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 #meme-canvas {
@@ -42,9 +44,9 @@ button {
 
 button {
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #ff0000;
     color: #fff;
-    border: none;
+    border: dotted;
     border-radius: 4px;
 }
 
