@@ -5,38 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="meme.css">
     <title>Meme Generator</title>
-    <!-- <style>
-        .meme-generator {
-            margin: 20px auto;
-            width: 400px;
-            font-family: 'Times New Roman', Times, serif;
-        }
-        .meme-generator label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .meme-generator input {
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-        }
-        #meme {
-            width: 100%;
-        }
-    </style> -->
+
 </head>
 <body>
+    <!-- this will be the structure of the meme template -->
      <div class="container">
         <h1>Meme Generator</h1>
-        <input type="file" id="image-upload" accept="image/*">
+        <input type="file" id="image-upload" accept="image/*" multiple>
+        <br>
         <input type="text" id="top-text" placeholder="Top Text">
+        <br>
         <input type="text" id="bottom-text" placeholder="Bottom Text">
-        <button id="generate-btn">Generate Meme</button>
+        <button id="generate-btn">Create Meme</button>
         <div class="meme-container">
             <canvas id="meme-canvas"></canvas>
         </div>
         <button id="download-btn" style="display: none;">Download Meme</button>
+        <br>
+        <button id="delete-btn">Delete Meme</button>
     </div>
 
     <script src="meme.js"></script>
